@@ -115,7 +115,7 @@ if( isset($_POST['sub'])) {
 
             $filez = $uploads_dir . $name;
             $csvAsArray = array_map(function($row) { return str_getcsv($row, ';'); }, file($filez)); 
-             print_r($csvAsArray);
+            print_r($csvAsArray);
     
              foreach($csvAsArray as $a) {
                 
@@ -165,7 +165,7 @@ if( isset($_POST['sub'])) {
 
     
 
-  
+
 
     }
 
