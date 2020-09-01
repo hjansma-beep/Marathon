@@ -1,0 +1,801 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #eaeaea;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-gap: 1em;
+}
+
+@media screen and (min-width: 1399px) { body {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+  }  
+  header, 
+  footer {
+    grid-column: 1 / span 2;
+    height: auto;
+  } 
+}
+  
+  /* Demo Specific Styles */
+  body {
+    margin: 0 auto;
+    max-width: 56em;
+    padding: 1em 0;
+  }
+  
+  header {
+    border: 2px solid #0e2b3d;
+    background: #216288;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  main{
+    background: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    border: 1px solid #0e2b3d;
+    background: url("../img/marathon.jpg") no-repeat center center ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 600px;
+  }
+  #main2{
+    background: #70a3f4;
+   /*  display: flex; 
+    align-items: center;  */
+    text-align: center;
+    justify-content: center; 
+    border: 1px solid #0e2b3d;
+    font-family: 'Oxygen', sans-serif;
+    /* text-align: left; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  aside{
+    background: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0e2b3d;
+  }
+  /* footer {
+    background: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+  #pointermenu2{
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    }
+    
+    #pointermenu2 ul{
+    margin: 0;
+    margin-left: 15px; /*menu offset from left edge of window*/
+    float: left;
+    padding-left: 8px;
+    font-size:  20px;
+    font-family: 'Oxygen', sans-serif;
+    background: #216288 url(media/leftround2.gif) bottom left no-repeat; /*optional left round corner*/
+    }
+    
+    * html #pointermenu2 ul{ /*IE6 only rule. Decrease ul left margin and add 1em bottom margin*/
+    margin-bottom: 1em;
+    margin-left: 7px; /*menu offset from left edge of window in IE*/
+    }
+    
+    #pointermenu2 ul li{
+    display: inline;
+    }
+    
+    
+    #pointermenu2 ul li a{
+    float: left;
+    color: white;
+    font-weight: bold;
+    padding: 7px 9px 7px 5px;
+    text-decoration: none;
+    }
+    
+    #pointermenu2 ul li a:visited{
+    color: white;
+    }
+    
+    
+    #pointermenu2 ul li a:hover, #pointermenu2 ul li a#selected{ /*hover and selected link*/
+    color: black;
+    background: transparent url(media/pointer.gif) bottom center no-repeat;
+    }
+    
+    #pointermenu2 ul li a#rightcorner{
+    padding-right: 0;
+    padding-left: 2px;
+    background: url(media/rightround2.gif) bottom right no-repeat; /*optional right round corner*/
+    }
+    .form9{
+        height: 200px;
+        max-width: 250px;
+        background: #FAFAFA;
+        /* padding: 30px; */
+        margin: 50px auto;
+        box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+        border-radius: 10px;
+        border: 6px solid #305A72;
+        opacity: 0.8;
+    }
+    .form10{
+      height: 155px;
+      max-width: 250px;
+      background: #FAFAFA;
+      opacity: 0.8;
+      /* padding: 30px; */
+      margin: 50px auto;
+      box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+      border-radius: 10px;
+      border: 6px solid #305A72;
+      padding-bottom: 20px;
+  }
+    #inp1 {
+
+        font-size: 15px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-family: 'Oxygen', sans-serif;
+       
+       } 
+       #inp3 {
+
+        font-size: 15px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-family: 'Oxygen', sans-serif;
+       
+       } 
+       #inp2 {
+           display: block;
+           margin: 0 auto; 
+           /* margin-top: 3%; */
+           -moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
+           -webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
+           box-shadow: inset 0px 1px 0px 0px #3985B1;
+           background-color: #216288;
+           border: 1px solid #17445E;
+           cursor: pointer;
+           color: #FFFFFF;
+           font-size: 16px;
+           font-family: 'Oxygen', sans-serif;
+           height: 25px;
+       }
+       #inp4 {
+
+        margin-right: 10px;
+        float: right;
+        border: 1px solid #216288;
+        display: block;
+        color: black;
+        background-color: #70a3f4;
+        border-radius: 5px;
+        margin-bottom: 4px;
+        text-align: center;
+    
+    }
+    #inp4:hover, #inpPostcode:hover, #inpToevoeging:hover  {
+    
+        background-color: #9ebded;
+        
+    
+    }
+    #inp5 {
+    
+        border: 1px solid #17445E;
+        border-radius: 5px;
+        background: #071923;
+        color: #fff;
+        width: 80%;
+        padding: 0;
+        cursor: pointer;
+        height: 25px;
+        position: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-family: 'Oxygen', sans-serif;
+    
+    }
+    #inp6 {
+        font-family: 'Oxygen', sans-serif;
+        border: 1px solid #e83737;
+        border-radius: 5px;
+        background: #e54b4b;
+        color: #fff;
+        width: 80%;
+        margin-top: 10px;
+        /* padding: 0; */
+        cursor: pointer;
+        height: 25px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 10px;
+    
+    }
+    #inpPostcode {
+      margin-right: 5px;
+      float: right;
+      border: 1px solid #216288;
+      display: block;
+      color: black;
+      background-color: #70a3f4;
+      border-radius: 5px;
+      margin-bottom: 4%;
+      text-align: center;
+      width:112px;
+      
+    }
+    #inpToevoeging {
+      margin-right: 10px;
+      float: right;
+      border: 1px solid #216288;
+      display: block;
+      color: black;
+      background-color: #70a3f4;
+      border-radius: 5px;
+      margin-bottom: 4%;
+      text-align: center;
+      width:54px;
+    }
+    #inpDatum {
+      margin-right: 10px;
+      float: right;
+      border: 1px solid #216288;
+      display: block;
+      color: black;
+      background-color: #70a3f4;
+      border-radius: 5px;
+      margin-bottom: 4%;
+      text-align: right;
+      width:171px;
+    }
+    #inpLeeftijd {
+      /* float: right; */
+      border: 1px solid #216288;
+      color: black;
+      background-color: #72b3d8;
+      border-radius: 5px;
+      text-align: center;
+      width:54px;
+      padding: 0px;
+      margin: 0px 0px 0px 8px;
+      
+    }
+    #inpLeeftijd:hover {
+      background-color: #87d3ff;
+    }
+    #inpLeeftijd2 {
+      /* float: right; */
+      border: 1px solid #216288;
+      color: black;
+      background-color: red;
+      border-radius: 5px;
+      text-align: center;
+      width:54px;
+      padding: 0px;
+      margin: 0px;
+      
+    }
+    #inpWoonplaats {
+      /* float: right; */
+      border: 1px solid #216288;
+      color: black;
+      background-color: #72b3d8;
+      border-radius: 5px;
+      text-align: center;
+      width:110px;
+      padding-right: 0px;
+      margin: 0px 15px 0px 8px;
+
+      
+    }
+    #inpWoonplaats:hover {
+      background-color: #87d3ff;
+    }
+    #geslacht {
+      margin-right: 10px;
+      float: right;
+      border: 1px solid #216288;
+      display: block;
+      color: black;
+      background-color: #70a3f4;
+      border-radius: 5px;
+      margin-bottom: 4%;
+      text-align-last:center;
+      width:171px;
+    }
+       .footer-distributed{
+        background-color: #17445E;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+        box-sizing: border-box;
+        width: 100%;
+        text-align: left;
+        font-size:  16px;
+        font-family: 'Oxygen', sans-serif;
+        padding: 45px 50px;
+        margin-top: 0px;
+        border: 2px solid #0e2b3d;
+      }
+      
+      .footer-distributed .footer-left p{
+        color:  #8f9296;
+        font-size: 14px;
+        margin: 0;
+      }
+      
+      /* Footer links */
+      
+      .footer-distributed p.footer-links{
+        font-size:18px;
+        font-weight: bold;
+        color:  #ffffff;
+        margin: 0 0 10px;
+        padding: 0;
+      }
+      
+      .footer-distributed p.footer-links a{
+        display:inline-block;
+        line-height: 1.8;
+        text-decoration: none;
+        color:  inherit;
+      }
+      
+      .footer-distributed .footer-right{
+        float: right;
+        margin-top: 6px;
+        max-width: 180px;
+      }
+      
+      .footer-distributed .footer-right a{
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        background-color:  #17445E;
+        border-radius: 2px;
+      
+        font-size: 20px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 35px;
+      
+        margin-left: 3px;
+      }
+      
+      /* If you don't want the footer to be responsive, remove these media queries */
+      
+      @media (max-width: 600px) {
+      
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-right{
+          text-align: center;
+        }
+      
+        .footer-distributed .footer-right{
+          float: none;
+          margin: 0 auto 20px;
+        }
+      
+        .footer-distributed .footer-left p.footer-links{
+          line-height: 1.8;
+        }
+      } 
+      .form-style-9{
+        opacity: 0.9;
+        max-width: 550px;
+        background: #FAFAFA;
+        padding: 30px;
+        margin: 50px auto;
+        box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+        border-radius: 10px;
+        border: 2px solid #305A72;
+        font-family: 'Oxygen', sans-serif;
+
+      }
+      .form-style-9 ul{
+        padding:0;
+        margin:0;
+        list-style:none;
+      }
+      .form-style-9 ul li{
+        display: block;
+        margin-bottom: 10px;
+        min-height: 35px;
+      }
+      .form-style-9 ul li  .field-style{
+        box-sizing: border-box; 
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box; 
+        padding: 8px;
+        outline: none;
+        border: 1px solid #B0CFE0;
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+      
+      }.form-style-9 ul li  .field-style:focus{
+        box-shadow: 0 0 5px #B0CFE0;
+        border:1px solid #B0CFE0;
+      }
+      .form-style-9 ul li .field-split{
+        width: 32.7%;
+      }
+      .form-style-9 ul li .field-full{
+        width: 100%;
+      }
+      .form-style-9 ul li input.align-left{
+        float:left;
+        margin-right: 5px;
+      }
+      .form-style-9 ul li select.align-leftA{
+        float:left;
+        margin-right: 5px;
+        width: 117px;
+        height: 33px;
+      }
+      .form-style-9 ul li input.align-center{
+        margin-left: auto;
+        margin-right: auto;
+        /* border: solid 1px red; */
+      }
+      .form-style-9 ul li input.align-centerB{
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        float: right;
+        /* border: solid 1px red; */
+      }
+      .form-style-9 ul li input.align-centerA{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+        /* border: solid 1px red; */
+      }
+      .form-style-9 ul li input.align-centerC{
+        margin-left: auto;
+        margin-right: auto;
+        width: 55px;
+      }
+      .form-style-9 ul li input.align-right{
+        float:right;
+      }
+      .form-style-9 ul li textarea{
+        width: 100%;
+        height: 100px;
+      }
+      .form-style-9 ul li input[type="button"], 
+      .form-style-9 ul li input[type="submit"] {
+        -moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
+        -webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
+        box-shadow: inset 0px 1px 0px 0px #3985B1;
+        background-color: #216288;
+        border: 1px solid #17445E;
+        display: inline-block;
+        cursor: pointer;
+        color: #FFFFFF;
+        padding: 8px 18px;
+        text-decoration: none;
+        font: 12px Arial, Helvetica, sans-serif;
+      }
+      .form-style-9 ul li input[type="button"]:hover, 
+      .form-style-9 ul li input[type="submit"]:hover {
+        background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+        background-color: #28739E;
+      }
+      #form1 {
+        background-color: #216288;
+        border: 1px solid white;
+        border-radius: 5px;
+        color: white;
+        font-family: 'Oxygen', sans-serif;
+        padding-left: 0px;
+        opacity: 0.9;
+      }
+      #p1 {
+        font-family: 'Oxygen', sans-serif;
+        text-align: center;
+        background: #216288;
+        border-radius: 5px;
+        color: white;
+        padding: 5px 5px;
+        opacity: 0.9;
+        font-size: 20px;
+        cursor: pointer;
+        display: none;
+      }
+      #p2 {
+        font-family: 'Oxygen', sans-serif;
+        text-align: center;
+        background: #216288;
+        border-radius: 5px;
+        color: white;
+        padding: 5px 5px;
+        opacity: 0.9;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      #error {
+       font-family: 'Oxygen', sans-serif;
+       background: #FAFAFA;
+       margin-top: 10px;
+       margin-bottom: 0px;
+       /* display: block; */
+       padding: 0px;
+       color: white;
+       text-align: center; 
+       font-size: 16px;
+       min-height: 17px;
+       background-color: #216288;
+       font-family: 'Oxygen', sans-serif;
+      
+      }
+      #error2 {
+        font-family: 'Oxygen', sans-serif;
+        background: #FAFAFA;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        display: block;
+        padding: 0px;
+        color: red;
+        text-align: center;
+        font-size: 12px;
+        min-height: 20px;
+       
+       }
+
+       #error3 {
+        font-family: 'Oxygen', sans-serif;
+        background: #FAFAFA;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        display: block;
+        padding: 0px;
+        color: red;
+        text-align: center;
+        font-size: 12px;
+        min-height: 20px;
+       
+       }
+      #tabel1 {
+        font-family: 'Oxygen', sans-serif;
+        background-color: #72b3d8;
+        color: red;
+        padding: 5px;
+        color: black;
+        opacity: 0.9;
+      }
+      #tabel2 {
+        font-family: 'Oxygen', sans-serif;
+        background-color: #216288;
+        color: white;
+        padding: 0px;
+        opacity: 0.9;
+      }
+      #tabel3 {
+        font-family: 'Oxygen', sans-serif;
+        background-color: #72b3d8;
+        color: black;
+        padding: 0px;
+        opacity: 0.9;
+        font-size: 14px;
+      }
+      #useless {
+        padding: 0px;
+        margin: 0px;
+        background: white;
+      }
+      #zoekLeeftijd {
+        background: green;
+        display: none;
+        color: white;
+      }
+      #submitLeeftijd{
+        margin-top: 5px;
+        margin-bottom: 10px;
+        margin-left: 25%;
+        margin-right: 20%;
+        -moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
+        -webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
+        box-shadow: inset 0px 1px 0px 0px #3985B1;
+        background-color: #216288;
+        border: 1px solid #17445E;
+        display: inline-block;
+        cursor: pointer;
+        color: black;
+        font-family: 'Oxygen', sans-serif;
+        height: 30px;
+        width: 90px;
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+      #zoekForm{
+        background: #5599c1;
+        text-align: center;
+        font-family: 'Oxygen', sans-serif;
+        opacity: 0.9;
+        min-width: 315px;
+      }
+      #woonplaats {
+        padding-top: 0px;
+        margin-left: 5%;
+      }
+      #leeftijd{
+        margin: 0px;
+      } 
+      #resultaat {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+        background-color: #72b3d8;
+        margin: 0px;
+        font-family: 'Oxygen', sans-serif;
+        opacity: 0.9;
+      }
+      #certificaat{
+        background-color:white;
+      }
+     
+      /* test */
+
+      .navbar {
+        overflow: hidden;
+        background-color: #216288;
+        font-family: 'Oxygen', sans-serif;
+      }
+      
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+      
+      .dropdown .dropbtn {
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: yellow;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: 'Oxygen', sans-serif;
+        margin: 0;
+      }
+      
+      .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: black;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      #alignLeft {
+       float: left;
+       padding-left: 10px;
+      }
+      #imgMinimize {
+        margin-top: 2px;
+        margin-right: 5px;    
+        cursor: pointer;
+        float: right;
+ }
+ #head {
+      margin-top: 5px;
+      margin-bottom: 0px;
+      background-color: #5599c1;
+      opacity: 0.9;
+ }
+ tr#vaca2[data-href] {
+  cursor: pointer;
+}
+tr#vaca2:hover {
+  background: #93bed6;
+}
+#message {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  color: yellow;
+}
+#msg{
+  background-color: #72b3d8;
+  font-family: 'Oxygen', sans-serif;
+  text-align: center;
+  margin-bottom: 0px;
+  opacity: 0.9;
+  padding-top: 5px;
+  color: yellow;
+}
+#msg2{
+  background-color: #216288;
+  padding: 5px;
+  font-family: 'Oxygen', sans-serif;
+  color: yellow;
+  opacity: 0.9;
+  display: none;
+  text-align: center;
+}
+#sidebar{
+  font-family: 'Oxygen', sans-serif;
+  padding: 5px;
+  background-color: #61a4cc;
+}
+#upload{
+  background-color: #61a4cc;
+  opacity: 0.9;
+  padding: 5px;
+}
+#inschrijving{
+  font-family: 'Oxygen', sans-serif;
+  background-color: #72b3d8;
+  width: 301px;
+  opacity: 0.9;
+  text-align: center;
+  margin-bottom: 0px;
+  padding-top: 5px;
+  margin-top: 0px;
+  color: white;
+}
+#gewijzigd{
+  color: red;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  background-color: #72b3d8;
+  opacity: 0.9;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 20px;
+}
