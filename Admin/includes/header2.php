@@ -19,6 +19,7 @@
             <li><a href="gebruikers.php">Gebruikers</a></li>
             <li><a href="inschrijvingen.php">Inschrijvingen</a></li>
             <li><a href="upload.php">Upload CSV files</a></li>
+            <li><a href="uitloggen.php">Uitloggen</a></li>
             <li><a href="#" id="rightcorner">&nbsp;</a></li>
             </ul>
             <br style="clear: left" />

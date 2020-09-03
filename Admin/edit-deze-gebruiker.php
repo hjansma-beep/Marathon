@@ -38,6 +38,18 @@ if(!empty($_GET['m'])) {
     }
     </style>';
     $msg = 'Gebruiker + inschrijvingen verwijdert';
+ 
+  } else if($_GET['m'] === '3') {
+
+    echo '<style>
+    #form1 {
+        display: none;
+    }
+    #msg3 {
+      display: block;
+    }
+    </style>';
+    $msg = 'Inschrijving verwijdert!';
 
   }
 
@@ -59,6 +71,8 @@ $deelnemers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <main>
 
 <p id = 'msg2' > <?php echo $msg ?><br><a style='color:white; text-align: center;' href='gebruikers.php'>Terug naar gebruikers.</a></p>
+
+<p id = 'msg3' > <?php echo $msg ?><br><a style='color:white; text-align: center;' href='inschrijvingen.php'>Terug naar inschrijvingen.</a></p>
 
 <form id="form1" method="POST" action="updatet.php">
 

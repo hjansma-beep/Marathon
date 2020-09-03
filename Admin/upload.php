@@ -2,13 +2,15 @@
 
 session_start();
 
+$added = '';
+
 if(isset($_SESSION["ID"]) && $_SESSION["admin_STATUS"] === 1) {
 
 include('includes/header2.php');
 include("../dbconfig.php");
 if( isset($_POST['sub'])) {
 
-    print_r($_POST);
+    // print_r($_POST);
     $uploads_dir = 'uploads/';
     $tmp_name = $_FILES["file"]["tmp_name"];
     $name = basename($_FILES["file"]["name"]);
@@ -16,14 +18,14 @@ if( isset($_POST['sub'])) {
     // check of het te uploaden bestand al bestaat
 
     if(file_exists($uploads_dir . $name)) {
-        echo "dit bestand bestaat al<br>";
+        $added = "dit bestand bestaat al";
     }  else {
 
     // upload naar uploads map    
  
     if(move_uploaded_file($tmp_name, "$uploads_dir/$name")) {
 
-    echo 'uploaded';
+    // echo 'uploaded';
 
     } 
         $filez = $uploads_dir . $name;
@@ -58,7 +60,7 @@ if( isset($_POST['sub'])) {
                 }
                $i++;
             }
-            print_r($results);
+            // print_r($results);
             $results = array_keys($results, max($results));
             return $results[0];
         }
@@ -74,7 +76,7 @@ if( isset($_POST['sub'])) {
             $filez = $uploads_dir . $name;
     
             $csvAsArray = array_map('str_getcsv', file($filez));
-            print_r($csvAsArray);
+            // print_r($csvAsArray);
 
             fclose($file);
     
@@ -100,7 +102,7 @@ if( isset($_POST['sub'])) {
             $insert = $db->prepare($query);
             $data = array($voornaam,$achternaam,$geboortedatum,$geslacht,  $gebr_ID, $datum, $telefoonnummer, $IBAN , $adres, $postcode , $woonplaats);
             try {
-                echo "deelnemers toegevoegd";
+                $added = "deelnemers toegevoegd";
                 $insert->execute($data);
             } catch(PDOException $e) {
                 echo "<script>alert('deelnemers niet toegevoegd');</script>";
@@ -115,7 +117,7 @@ if( isset($_POST['sub'])) {
 
             $filez = $uploads_dir . $name;
             $csvAsArray = array_map(function($row) { return str_getcsv($row, ';'); }, file($filez)); 
-            print_r($csvAsArray);
+            // print_r($csvAsArray);
     
              foreach($csvAsArray as $a) {
                 
@@ -141,7 +143,7 @@ if( isset($_POST['sub'])) {
             $insert = $db->prepare($query);
             $data = array($voornaam,$achternaam,$newFormat,$geslacht,  $gebr_ID, $datum, $telefoonnummer, $IBAN , $adres, $postcode , $woonplaats);
             try {
-                echo "deelnemers toegevoegd";
+                $added = "deelnemers toegevoegd";
                 $insert->execute($data);
             } catch(PDOException $e) {
                 echo "<script>alert('deelnemers niet toegevoegd');</script>";
@@ -179,6 +181,7 @@ if( isset($_POST['sub'])) {
 
 <main>
 <form id='upload' method='post' enctype='multipart/form-data'>
+    <p id='added'><?php echo $added ?></p>
     Voeg hier het gebruikers ID toe om bestand op te importeren:<br><input type='text' name='id'/><br><br>
     <input type='file' name='file'/><br><br>
     <input type='submit' name='sub' value='Import'/>

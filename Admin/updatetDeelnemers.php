@@ -53,32 +53,17 @@ $query = "UPDATE persoonsgegevens SET voornaam = ?, achternaam = ?, geboortedatu
 if(isset($_POST['delete'])){
 
     $id = $_POST['id'];
-    $query = "DELETE FROM gebruiker WHERE ID = ?";
+    $query = "DELETE FROM persoonsgegevens WHERE ID = ?";
     $delete = $db->prepare($query);
     try {
     $delete->execute(array($id));
+    header('Location: edit-deze-gebruiker.php?id=' . $id . '&m=3');
 
     } catch(PDOException $e) {
 
         echo "<script>alert('persoonsgegevens niet verwijdert');</script>";
 
     }
-
-    $id = $_POST['id'];
-    $query = "DELETE FROM persoonsgegevens WHERE gebr_ID = ?";
-    $delete = $db->prepare($query);
-    try {
-    $delete->execute(array($id));
-    header('Location: edit-deze-gebruiker.php?id=' . $id . '&m=2');
-
-    } catch(PDOException $e) {
-
-        echo "<script>alert('persoonsgegevens niet verwijdert');</script>";
-
-    }
-
-
-
 
 }
 
