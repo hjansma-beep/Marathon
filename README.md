@@ -1,5 +1,5 @@
-Site om in te schrijven voor een marathon gemaakt in PHP + SQL
-Screenshots van de website staan in het mapje Screenshots
+Site om in te schrijven voor een marathon gemaakt in PHP + SQL.
+Screenshots van de website staan in het mapje Screenshots.
 database structuur zit bijgevoegd met naam sportwedstrijd(3).sql
 
 
